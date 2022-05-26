@@ -30,6 +30,10 @@ export function FeedbackProvider ({ children }) {
     setFeedback(feedback.map(item =>{ 
       return item.id === id ? {...item, ...updatedItem }: item
     }))
+    setFeedbackEdit({
+      item: {},
+      isEdit: false
+    })
   }
   // Delete feedback 
   function deleteFeedback(id) {
